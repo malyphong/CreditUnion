@@ -8,3 +8,7 @@
 .newTransaction {
   display: none;
 }
+
+#welcome {
+  display: none;
+}

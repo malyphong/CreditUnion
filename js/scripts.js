@@ -1,5 +1,6 @@
 // business logic
-function Total(inputDeposit, initialDeposit, inputWithdrawal) {
+function Total(name, inputDeposit, initialDeposit, inputWithdrawal) {
+  this.inputName = name;
   this.depositAmount = inputDeposit;
   this.initialAmount = initialDeposit;
   this.withdrawalAmount = inputWithdrawal;
@@ -29,6 +30,8 @@ function resetFields() {
 $(document).ready(function() {
   $("form.newAccount").submit(function(event) {
     event.preventDefault();
+    $("#registration").hide();
+    $("#welcome").show();
     $(".newBalance").show();
     $(".depositAndWithdraw").show();
 
@@ -36,6 +39,7 @@ $(document).ready(function() {
     initialDeposit = parseFloat($("input#depositInput").val());
 
     $(".balanceAmount").text(initialDeposit);
+    $(".userName").text(inputName);
 
     $("form.depositAndWithdraw").submit(function(event) {
       event.preventDefault();
