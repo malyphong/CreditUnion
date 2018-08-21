@@ -10,6 +10,15 @@ h1 {
   padding: 20px;
 }
 
+a {
+  color: #53b8c1;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 h4 {
   font-size: 20px;
   margin-bottom: 20px;
