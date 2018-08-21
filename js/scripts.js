@@ -1,7 +1,12 @@
 // business logic
-var initialDeposit;
-var inputDeposit;
-var inputWithdrawal;
+function depositedBalance(name, deposit,initialDeposit) {
+  this.depositAmount = deposit;
+  this.initialAmount = initialDeposit;
+  this.inputName = name;
+}
+ depositedBalance.prototype.outcomeBalance = function() {
+   return this.inputName + "made a deposit of" + this.deposit;
+ }
 
 var deposit = function(addingMoney) {
   if (inputDeposit > 0) {
@@ -22,7 +27,7 @@ $(document).ready(function() {
     $(".newBalance").show();
 
     var inputName = $("input#nameInput").val();
-    initialDeposit = (parseFloat($("input#depositInput").val())).toFixed(2);
+    initialDeposit = parseFloat($("input#depositInput").val());
 
     $(".balanceAmount").text(initialDeposit);
 
@@ -32,6 +37,7 @@ $(document).ready(function() {
       event.preventDefault();
 
       inputDeposit = parseFloat($("input#depositAmount").val());
+      console.log(inputDeposit);
       inputWithdrawal = parseFloat($("input#withdrawalAmount").val());
 
       var result = deposit(initialDeposit);
