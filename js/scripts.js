@@ -59,7 +59,7 @@ $(document).ready(function() {
         event.preventDefault();
         resetFields()
 
-        initialDeposit = result.toFixed(2);
+        initialDeposit = result;
 
         $(".balanceAmount").text(result);
       })
