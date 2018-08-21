@@ -1,3 +1,10 @@
 .newBalance {
   display: none;
 }
+
+.depositAndWithdraw {
+  display: none;
+}
+.newTransaction {
+  display: none;
+}
